@@ -1,0 +1,5 @@
+livekit-agents[groq,elevenlabs,silero,turn-detector]
+livekit-plugins-noise-cancellation
+chromadb
+python-dotenv
+sentence-transformers

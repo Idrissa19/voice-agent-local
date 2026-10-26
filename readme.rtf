@@ -1,0 +1,164 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww29200\viewh16180\viewkind0
+\deftab720
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+\'c9tape 0 \'97 Comptes et cl\'e9s API (10-15 min)\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 Avant de coder, cr\'e9e des comptes gratuits et r\'e9cup\'e8re tes cl\'e9s :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+LiveKit Cloud
+\f1\b0  (gratuit) 
+\f2 \uc0\u8594 
+\f1  cl\'e9 + secret + URL websocket\
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Deepgram
+\f1\b0  (STT) 
+\f2 \uc0\u8594 
+\f1  cl\'e9 API, cr\'e9dit gratuit\
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Groq
+\f1\b0  (LLM, gratuit) 
+\f2 \uc0\u8594 
+\f1  cl\'e9 API\
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+ElevenLabs
+\f1\b0  (TTS) 
+\f2 \uc0\u8594 
+\f1  cl\'e9 API, 10K cr\'e9dits/mois gratuits\uc0\u8232 Mets tout \'e7a dans un fichier 
+\f3\fs26 .env
+\f1\fs24 .\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \'c9tape 1 \'97 Structure du projet\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0 \cf0 Cr\'e9e les dossiers : 
+\f3\fs26 knowledge_base/
+\f1\fs24  (tes docs texte), 
+\f3\fs26 agent.py
+\f1\fs24 , 
+\f3\fs26 rag.py
+\f1\fs24 , 
+\f3\fs26 ingest.py
+\f1\fs24 , 
+\f3\fs26 .env
+\f1\fs24 . R\'e9fl\'e9chis toi-m\'eame \'e0 quoi va dans chaque fichier avant de coder \'97 je valide ton d\'e9coupage si tu veux.\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \'c9tape 2 \'97 Base de connaissances (RAG)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f1\b0 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\'c9cris 2-3 documents 
+\f3\fs26 .md
+\f1\fs24  simples (FAQ produit/support).\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\'c9cris 
+\f3\fs26 rag.py
+\f1\fs24  : d\'e9coupage en chunks + recherche vectorielle avec ChromaDB.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Point de blocage que tu vas rencontrer
+\f1\b0  : l'embedding par d\'e9faut de ChromaDB t\'e9l\'e9charge un mod\'e8le ONNX depuis S3 \'97 \'e7a peut \'eatre bloqu\'e9 selon ton r\'e9seau. Solutions possibles : 
+\f3\fs26 sentence-transformers
+\f1\fs24  en local, ou l'API d'embeddings d'OpenAI/Groq. \'c0 toi de choisir et tester.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Teste en CLI : ing\'e8re les docs, fais une recherche manuelle, v\'e9rifie que les r\'e9sultats sont pertinents.\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \'c9tape 3 \'97 L'agent vocal (c\'9cur du projet)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f1\b0 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\'c9cris 
+\f3\fs26 agent.py
+\f1\fs24  avec 
+\f3\fs26 AgentSession
+\f1\fs24  de 
+\f3\fs26 livekit-agents
+\f1\fs24  : branche STT (Deepgram, langue 
+\f3\fs26 fr
+\f1\fs24 ), LLM (Groq), TTS (ElevenLabs, langue 
+\f3\fs26 fr
+\f1\fs24 ).\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Ajoute un 
+\f0\b outil
+\f1\b0  (
+\f3\fs26 function_tool
+\f1\fs24 ) que le LLM peut appeler pour interroger ta base RAG.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\'c9cris le prompt syst\'e8me : ton, limites, quand escalader vers un humain.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Teste en local dans le "playground" navigateur de LiveKit (pas besoin de Twilio pour l'instant).\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \'c9tape 4 \'97 Tester et it\'e9rer\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f1\b0 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pose des questions dont la r\'e9ponse est dans tes docs 
+\f2 \uc0\u8594 
+\f1  v\'e9rifie qu'il cite la bonne info.\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pose une question hors sujet 
+\f2 \uc0\u8594 
+\f1  v\'e9rifie qu'il ne hallucine pas.\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Ajuste chunk size, prompt, nombre de r\'e9sultats retourn\'e9s par la recherche.\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \'c9tape 5 \'97 T\'e9l\'e9phonie (Twilio)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0
+\f1\b0 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Ach\'e8te un num\'e9ro Twilio, configure le SIP trunk vers LiveKit (leur doc officielle explique le "SIP inbound trunk").\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Teste un vrai appel t\'e9l\'e9phonique.\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \'c9tape 6 (optionnelle) \'97 Dashboard\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0
+\f1\b0 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Petite interface Streamlit pour ajouter des documents et tester la recherche sans toucher au code.\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+voice-agent/\
+\uc0\u9500 \u9472 \u9472  .env                  \u8592  tes cl\'e9s (jamais commit\'e9 sur git)\
+\uc0\u9500 \u9472 \u9472  .gitignore             \u8592  ignore .env, venv, fichiers de la base vectorielle\
+\uc0\u9500 \u9472 \u9472  requirements.txt       \u8592  d\'e9pendances Python\
+\uc0\u9500 \u9472 \u9472  knowledge_base/        \u8592  tes documents texte (.md ou .txt) \'e0 indexer\
+\uc0\u9500 \u9472 \u9472  data/                  \u8592  o\'f9 ChromaDB stockera ses fichiers (g\'e9n\'e9r\'e9 automatiquement)\
+\uc0\u9500 \u9472 \u9472  rag.py                 \u8592  logique de recherche dans la base de connaissances\
+\uc0\u9500 \u9472 \u9472  ingest.py               \u8592  script qui construit l'index vectoriel \'e0 partir de knowledge_base/\
+\uc0\u9492 \u9472 \u9472  agent.py                \u8592  le c\'9cur : connecte STT + LLM + TTS + outil RAG\
+}
