@@ -1,13 +1,3 @@
-"""
-agent.py — Point d'entrée de l'agent vocal Assurantia (100% local, via Ollama).
-
-Lancement : python agent.py dev   (mode développement, connecte au playground LiveKit)
-
-Prérequis : Ollama doit tourner en local avec le modèle llama3 déjà téléchargé
-    ollama serve        # si pas déjà lancé
-    ollama list          # vérifier que llama3 apparaît
-"""
-
 import asyncio
 import logging
 import os
@@ -16,7 +6,7 @@ import psutil
 from dotenv import load_dotenv
 
 from livekit.agents import Agent, AgentSession, JobContext, WorkerOptions, cli
-from livekit.plugins import elevenlabs, silero, openai
+from livekit.plugins import elevenlabs, openai, silero
 
 from stt_local import LocalWhisperSTT
 from tools import search_knowledge_base
@@ -24,18 +14,16 @@ from tools import search_knowledge_base
 load_dotenv()
 logger = logging.getLogger("assurantia-agent")
 
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.1")
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
 
 
 def get_llm():
-    """LLM local via Ollama (API compatible OpenAI)."""
     logger.info(f"LLM : Ollama local ({OLLAMA_MODEL} @ {OLLAMA_BASE_URL})")
     return openai.LLM(model=OLLAMA_MODEL, base_url=OLLAMA_BASE_URL, api_key="ollama")
 
 
 async def log_ram_periodically(interval: int = 30) -> None:
-    """Affiche la RAM utilisée par le process toutes les `interval` secondes."""
     process = psutil.Process(os.getpid())
     while True:
         mem_mb = process.memory_info().rss / (1024 * 1024)
@@ -71,7 +59,7 @@ async def entrypoint(ctx: JobContext):
         llm=get_llm(),
         tts=elevenlabs.TTS(language="fr"),
         vad=silero.VAD.load(),
-        turn_detection="vad",  # on s'appuie sur la VAD, pas sur le turn-detector (besoin de STT streaming)
+        turn_detection="vad",
     )
 
     asyncio.create_task(log_ram_periodically())

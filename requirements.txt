@@ -1,5 +1,7 @@
-livekit-agents[groq,elevenlabs,silero,turn-detector]
-livekit-plugins-noise-cancellation
+livekit-agents[openai,elevenlabs,silero]
 chromadb
-python-dotenv
 sentence-transformers
+mlx-whisper
+huggingface_hub
+psutil
+python-dotenv

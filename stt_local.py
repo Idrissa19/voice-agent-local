@@ -28,8 +28,6 @@ class LocalWhisperSTT(stt.STT):
             tmp.write(frame.to_wav_bytes())
             tmp.flush()
 
-            # Exécute le travail bloquant dans un thread séparé,
-            # pour ne pas geler le reste de l'agent pendant la transcription
             result = await asyncio.to_thread(
                 mlx_whisper.transcribe,
                 tmp.name,

@@ -5,9 +5,7 @@ __pycache__/
 venv/
 .env
 .env.*
+!.env.example
 api_key.txt
 .idea/
-.ipynb_checkpoints/
-.Rhistory
-.RData
-.Rproj.user/
+data/
